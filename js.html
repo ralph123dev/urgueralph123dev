@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bourde ralph</title>
+</head>
+<body>
+	<div class="container">
+		<form action="">
+			<label>Utilisateur</label>
+			<input type="text" required>
+			<label>Mot de passe</label>
+			<input tyupe="password" id="password" required>
+			<input type="submit" value="Envoyer">
+		</form>
+	</div>
+
+	<div id="message">
+		<h2>le mot de passe doit contenir les élèments suivant</h2>
+		<p id="letter" class="invalide">Une lettre minuscule</p>
+		<p id="capital" class="invalide">Une lettre majuscule</p>
+		<p id="number" class="invalide">Un chiffre</p>
+		<p id="lenght" class="invalide">8 caractéres minimum</p>
+	</div>
+
+	<style css>
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+		body
+		{
+			background: #675afe;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+
+		}
+		/*stylise le conteneur pour les entrés */
+		.container
+		{
+			background: #fff;
+			width: 350px;
+			padding: 20px;
+			border-radius: 6px;
+			box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+			
+		}
+		form
+		{
+			display: flex;
+			flex-direction: column;
+		}
+		input{
+			padding: 12px;
+			border: 1px solid #ccc;
+			outline: 0;
+			border-radius: 4px;
+			margin-top: 5px;
+			margin-bottom: 6px;
+		}
+		/*Personnaliserle boutton d'envoi*/
+		input[type="submit"]
+		{
+			background-color: #675afe;
+			color: #fff;
+			border: 1px solid #675afe;
+		}
+		/*Personnaliser la boite de message*/
+
+		#message
+		{
+			display: flex;
+			flex-direction: column;
+			background: #fff;
+			border-radius: 6px;
+			width: 350px;
+			color: #000;
+			position: relative;
+			padding: 20px;
+			margin-top: 10px;
+			letter-spacing: 0.5px;
+			animation: anime 0.5s ease-out;
+
+		}
+
+		/*Animation message*/
+		@keyframes anime 
+		{
+			from
+			{
+				transform: translateY(100px);
+			}
+		}
+		h3
+		{
+			font-size: 16px;
+			font-weight: 400;
+		}
+		#message
+		{
+			margin-left: 7px;
+			padding: 7px 0;
+			font-size: 15px;
+		}
+		/*lorsque les exigences sont érronneés*/
+		.invalid 
+		{
+			color: red;
+		}
+		.invalid:before
+		{
+			position: relative;
+			left: -7px;
+			content: "X";
+		}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+	<script language="javascript">
+
+		//Definir les variables
+		var myInput = document.getElementById('password');
+		var letter = document.getElementById('letter');
+		var capital = document.getElementById('capital');
+		var number = document.getElementById('number');
+		var length = document.getElementById('length');
+
+		//lorsque l'utilisateur clique sur le champ du mot de passe,afficher la boite de message
+		myInput.onfocus = function(){
+			document.getElementById("message").style.display = "block"
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
